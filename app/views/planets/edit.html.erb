@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Edit <%= @planet.name %></h1>
+  <%= simple_form_for @planet do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.submit class: 'mt-2' %>
+  <% end %>
+</div>

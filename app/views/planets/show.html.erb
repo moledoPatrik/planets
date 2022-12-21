@@ -1,4 +1,6 @@
 <div class="container">
   <h1><%= @planet.name %></h1>
   <p><%= @planet.description %></p>
+  <%= link_to 'Edit planet', edit_planet_path %>
+  <%= link_to 'Destroy planet', planet_path(@planet), data: {turbo_method: 'delete', turbo_confirm: 'Are you sure?'}  %>
 </div>
