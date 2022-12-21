@@ -1,4 +1,9 @@
 <div class="container">
-  <h1>Index page</h1>
-  <i class="fa-solid fa-clapperboard"></i>
+  <h1>Planets</h1>
+  <% @planets.each do |planet| %>
+    <p>
+      <%= link_to planet.name, planet_path(planet) %>
+    </p>
+  <% end %>
+  <%= link_to 'Add planet', new_planet_path %>
 </div>
