@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root 'planets#index'
-  resources :planets
+  resources :planets do
+    resources :aliens
+  end
 end
