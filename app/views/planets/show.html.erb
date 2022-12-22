@@ -2,6 +2,14 @@
   <h1><%= @planet.name %></h1>
   <%= cl_image_tag @planet.photo.key, alt: "Planet picture" %>
   <p><%= @planet.description %></p>
+  <%= link_to 'Add alien', new_planet_alien_path(@planet) %>
   <%= link_to 'Edit planet', edit_planet_path %>
   <%= link_to 'Destroy planet', planet_path(@planet), data: {turbo_method: 'delete', turbo_confirm: 'Are you sure?'}  %>
+  <h2>Aliens</h2>
+  <% @planet.aliens.each do |alien| %>
+    <%= cl_image_tag alien.photo.key, alt: "text" %>
+    <p><%= alien.name %></p>
+    <p><%= alien.age %></p>
+    <p><%= link_to 'Destroy alien', [@planet, alien], data: {turbo_method: 'delete', data_confirm: 'Are you sure?'} %></p>
+  <% end %>
 </div>
