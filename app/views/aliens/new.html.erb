@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Add an alien to <%= @planet.name %> planet</h1>
+  <%= simple_form_for [@planet, @alien] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :age %>
+    <%= f.input :photo %>
+    <%= f.submit class: 'mt-2' %>
+  <% end %>
+</div>
