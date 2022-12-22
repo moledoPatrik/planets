@@ -10,5 +10,6 @@
     <%= cl_image_tag alien.photo.key, alt: "text" %>
     <p><%= alien.name %></p>
     <p><%= alien.age %></p>
+    <p><%= link_to 'Destroy alien', [@planet, alien], data: {turbo_method: 'delete', data_confirm: 'Are you sure?'} %></p>
   <% end %>
 </div>

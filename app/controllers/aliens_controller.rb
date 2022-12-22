@@ -27,8 +27,10 @@ class AliensController < ApplicationController
   # end
 
   def destroy
-    raise
-    @alien =
+    @planet = Planet.find(params[:planet_id])
+    @alien = Alien.find(params[:id])
+    @alien.destroy
+    redirect_to planet_path(@planet), status: :see_other
   end
 
   private
