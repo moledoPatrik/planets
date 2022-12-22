@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Planets</h1>
   <% @planets.each do |planet| %>
+    <%= cl_image_tag planet.photo.key, alt: "Planet picture" %>
     <p>
       <%= link_to planet.name, planet_path(planet) %>
     </p>

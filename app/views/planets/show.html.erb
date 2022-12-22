@@ -1,5 +1,6 @@
 <div class="container">
   <h1><%= @planet.name %></h1>
+  <%= cl_image_tag @planet.photo.key, alt: "Planet picture" %>
   <p><%= @planet.description %></p>
   <%= link_to 'Edit planet', edit_planet_path %>
   <%= link_to 'Destroy planet', planet_path(@planet), data: {turbo_method: 'delete', turbo_confirm: 'Are you sure?'}  %>
