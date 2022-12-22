@@ -52,6 +52,8 @@ gem "font-awesome-sass", "~> 6.1" # need this one to import in the scss file
 gem 'bootstrap', '~> 5.2.3'
 gem "autoprefixer-rails"
 gem 'simple_form'
+gem 'dotenv-rails'
+gem 'cloudinary'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
