@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "User adds a planet" do
-  scenario "they see the new planet page" do
+RSpec.feature 'User adds a planet' do
+  scenario 'they see the new planet page' do
     planet_name = 'Earth'
     planet_description = 'Cool planet, but humans are destroying it'
 
