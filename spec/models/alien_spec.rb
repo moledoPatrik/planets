@@ -15,3 +15,9 @@ RSpec.describe Alien, ".oldest" do
     expect(Alien.oldest).to eq [oldest, middle, youngest]
   end
 end
+
+RSpec.describe Alien, "validations" do
+  it { expect(subject).to validate_presence_of(:name) }
+  it { expect(subject).to validate_presence_of(:age) }
+  # it { is_expected.to validate_uniqueness_of(:something) }
+end
