@@ -7,4 +7,9 @@ class Alien < ApplicationRecord
   def increment_age!
     self.age += 1
   end
+
+  def self.oldest
+    aliens = Alien.all.sort_by { |alien| alien.age }
+    aliens.reverse
+  end
 end
