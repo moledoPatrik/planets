@@ -6,7 +6,7 @@ RSpec.feature 'User adds a planet' do
     planet_description = 'Cool planet, but humans are destroying it'
 
     visit root_path
-    click_on "Add planet"
+    click_on 'Add planet'
     fill_in 'planet_name', with: planet_name
     fill_in 'planet_description', with: planet_description
     click_on 'Create Planet'
